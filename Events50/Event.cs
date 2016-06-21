@@ -5,31 +5,39 @@ namespace Events50
 {
 	public class Event
 	{
-		public string name;
-		public DateTime date;
-		public string speaker;
-		public string details;
-		public bool isPassed;
-		public int count;
-		public int totalCount;
+		public string name { get; set; }
+		public DateTime date { get; set; }
+		public string speaker { get; set; }
+		public string details { get; set; }
+		public bool isPassed { get; set; }
+		public int count { get; set; }
+		public int totalCount { get; set; }
 
-		public Event(name, date, details, isPassed)
+		public Event()
+		{
+
+		}
+
+		public Event(string name, DateTime date, string details)
 		{
 			this.name = name;
 			this.date = date;
 			this.details = details;
-			this.isPassed = isPassed;
-
+			this.isPassed = false;
 		}
 
-		public Event(name, date, speaker, details, isPassed)
+		public Event(string name, DateTime date, string speaker, string details)
 		{
 			this.name = name;
 			this.date = date;
 			this.speaker = speaker;
 			this.details = details;
-			this.isPassed = isPassed;
+			isPassed = false;
+		}
 
+		public override string ToString()
+		{
+			return string.Format("Name: {0}, Date: {1}, Event Information: {2}", name, date, details);
 		}
 	}
 }

@@ -1,9 +1,19 @@
 ﻿<Properties StartupItem="iOS/Events50.iOS.csproj">
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Events50/Event.cs">
+    <Files>
+      <File FileName="Events50/EventsPage.xaml" Line="15" Column="15" />
+      <File FileName="Events50/EventsPage.xaml.cs" Line="27" Column="1" />
+      <File FileName="Events50/Event.cs" Line="27" Column="3" />
+      <File FileName="Events50/Events50.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/jemiahsius/CS50/csharp/events50/Events50/EventsPage.xaml.cs" line="21" column="19" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.Events50.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.7EAF62F6-A933-447D-B877-47366C27B453" />
+  <MonoDevelop.Ide.ItemProperties.Events50.Droid PreferredExecutionTarget="Android.Xamarin_Android_API_15" />
 </Properties>

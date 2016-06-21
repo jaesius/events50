@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 
 using Xamarin.Forms;
 
@@ -8,23 +8,9 @@ namespace Events50
 	{
 		public App()
 		{
-			// The root page of your application
-			var content = new ContentPage
-			{
-				Title = "Events50",
-				Content = new StackLayout
-				{
-					VerticalOptions = LayoutOptions.Center,
-					Children = {
-						new Label {
-							HorizontalTextAlignment = TextAlignment.Center,
-							Text = "Welcome to Xamarin Forms!"
-						}
-					}
-				}
-			};
 
-			MainPage = new NavigationPage(content);
+			 MainPage = new NavigationPage(new EventsPage());
+			//MainPage = new EventsPage();
 		}
 
 		protected override void OnStart()
