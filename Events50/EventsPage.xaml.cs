@@ -19,9 +19,8 @@ namespace Events50
 
 			EventsView.ItemSelected += (sender, e) =>  {
 
+				var x = (Event)e.SelectedItem;
 				DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
-
-
 			};
 		}
 	}
