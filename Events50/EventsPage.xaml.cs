@@ -13,16 +13,26 @@ namespace Events50
 
 			ObservableCollection<Event> eventList = new ObservableCollection<Event>();
 			EventsView.ItemsSource = eventList;
+			EventsView.IsPullToRefreshEnabled = true;
 
 			eventList.Add(new Event { name = "CS50 Intro", date = new DateTime(2016, 6, 10, 6, 30, 0), speaker="Dylan Waffle", details="This is CS50xMiami" });
 			eventList.Add(new Event { name = "CS50 Coding Hours", date = new DateTime(2016, 6, 13, 6, 30, 0), speaker = "Cecil Phillips", details = "Bet you hate Mario by now." });
 
-			EventsView.ItemSelected += (sender, e) =>  {
+			EventsView.ItemSelected += async (sender, e) =>  {
 
-				var x = (Event)e.SelectedItem;
-				DisplayAlert("Item Selected", e.SelectedItem.ToString(), "Ok");
+				if (e.SelectedItem == null)
+				{
+					return;
+				}
+				else {
+					Event selected = e.SelectedItem as Event;
+					((ListView)sender).SelectedItem = null;
+					await Navigation.PushAsync(new EventDetailPage(selected));
+				}
+
 			};
 		}
+
 	}
 }
 

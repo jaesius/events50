@@ -8,7 +8,10 @@ Title="Idea Center Events">
   <ListView x:Name="EventsView" >
     <ListView.ItemTemplate>
       <DataTemplate>
+
+			
         <TextCell Text="{Binding name}" Detail="{Binding date}" TextColor="Black" />
+					
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>
