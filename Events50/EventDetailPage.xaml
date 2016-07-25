@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		   	 xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+			 x:Class="Events50.EventDetailPage">
+	
+			 <StackLayout Padding="30">
+				<!-- Event Name -->
+			 	<StackLayout Orientation="Horizontal"
+							 HorizontalOptions="Center"
+							 Spacing="0">
+				<StackLayout.Resources>
+					<ResourceDictionary>
+						<Style TargetType="Label">
+							<Setter Property="FontSize" Value="Large" />
+							<Setter Property="FontAttributes" Value="Bold" />
+						</Style>
+					</ResourceDictionary>
+				</StackLayout.Resources>
+
+				<!--<Label Text="{Binding name}" />-->
+				</StackLayout>
+
+				<Label Text="{Binding date}"
+					   HorizontalOptions="Center" />
+
+				<Label Text="{Binding speaker}"
+					   HorizontalOptions="Center" />
+		
+				<Label Text="{Binding details}"
+						HorizontalOptions="Center" />
+
+					<Button Text="Register" TextColor="White" BackgroundColor="#4DB3F8" WidthRequest="75"
+	HeightRequest="30" />
+					<Button Text="Check In" TextColor="White" BackgroundColor="Navy" WidthRequest="75"
+	HeightRequest="30" />
+
+				<StackLayout VerticalOptions="StartAndExpand">
+			        <maps:Map WidthRequest="350" HeightRequest="350"
+			            x:Name="EventMap"
+			            MapType="Hybrid"
+			        />
+			    </StackLayout>
+		
+			</StackLayout>
+	
+	<ContentPage.Content>
+	</ContentPage.Content>
+</ContentPage>
+
